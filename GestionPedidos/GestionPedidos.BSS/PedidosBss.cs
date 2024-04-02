@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GestionPedidos.DAL;
+using GestionPedidos.Modelos;
 
 namespace GestionPedidos.BSS
 {
@@ -22,6 +23,14 @@ namespace GestionPedidos.BSS
         public DataTable CalcularPedidosClienteBss (int id)
         {
             return dal.CalcularTotalClienteDal(id);
+        }
+        public void InsertarPedidoBss (Pedidos pedidos)
+        {
+            dal.InsertarPedidoDal(pedidos);
+        }
+        public Pedidos ObtenerIdPedidoBss (int id)
+        {
+            return dal.ObtenerIdPedidoDal (id);
         }
     }
 }

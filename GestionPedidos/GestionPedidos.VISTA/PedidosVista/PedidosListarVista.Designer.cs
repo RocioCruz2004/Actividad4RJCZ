@@ -56,6 +56,7 @@
             button3.TabIndex = 7;
             button3.Text = "INSERTAR\r\nPEDIDO";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -65,6 +66,7 @@
             button4.TabIndex = 8;
             button4.Text = "EDITAR\r\nPEDIDO";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -92,6 +94,7 @@
             button7.TabIndex = 11;
             button7.Text = "CALCULAR PEDIDOS\r\nPOR CLIENTE";
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // PedidosListarVista
             // 

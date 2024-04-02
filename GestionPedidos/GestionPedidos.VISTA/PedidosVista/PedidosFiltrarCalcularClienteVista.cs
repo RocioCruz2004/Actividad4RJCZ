@@ -18,16 +18,12 @@ namespace GestionPedidos.VISTA.PedidosVista
             InitializeComponent();
         }
         PedidosBss bss = new PedidosBss();
-        private void button2_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(textBox1.Text);
-            dataGridView2.DataSource = bss.CalcularPedidosClienteBss(id);
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(textBox1.Text);
             dataGridView1.DataSource = bss.ListarPedidosClienteBss(id);
+            dataGridView2.DataSource = bss.CalcularPedidosClienteBss(id);
         }
     }
 }
