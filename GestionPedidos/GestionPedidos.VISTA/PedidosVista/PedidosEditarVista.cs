@@ -16,16 +16,14 @@
         {
             Pedidos pedidos = new Pedidos();
             PedidosBss bss = new PedidosBss();
-            int idx = 0;
-            public PedidosEditarVista(int id)
+            public PedidosEditarVista()
             {
                 InitializeComponent();
-                idx = id;
             }
 
             private void button2_Click(object sender, EventArgs e)
             {
-                pedidos = bss.ObtenerIdPedidoBss(idx);
+                pedidos = bss.ObtenerIdPedidoBss(Convert.ToInt32(textBox1.Text));
                 textBox2.Text = pedidos.IdCliente.ToString();
                 dateTimePicker1.Value = pedidos.Fecha;
                 textBox3.Text = pedidos.Total.ToString();
@@ -40,8 +38,8 @@
                 pedidos.Total = Convert.ToDecimal(textBox3.Text);
                 pedidos.Estado = comboBox1.SelectedItem.ToString();
 
-                bss.InsertarPedidoBss(pedidos);
-                MessageBox.Show("Agregado exitosamente");
+                bss.EditarPedidoBss(pedidos);
+                MessageBox.Show("Actualizado exitosamente");
             }
         }
     }

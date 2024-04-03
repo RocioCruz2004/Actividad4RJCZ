@@ -48,5 +48,14 @@ namespace GestionPedidos.VISTA.PedidosVista
                 dataGridView1.DataSource = bss.ListarPedidosBss();
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            PedidosEliminarVista ventana3 = new PedidosEliminarVista();
+            if (ventana3.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarPedidosBss();
+            }
+        }
     }
 }

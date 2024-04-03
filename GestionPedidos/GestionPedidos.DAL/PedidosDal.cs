@@ -52,7 +52,19 @@ namespace GestionPedidos.DAL
             }
             return pedidos;
         }
-        
+        public void EditarPedidoDal (Pedidos pedidos)
+        {
+            string consulta = "UPDATE PEDIDOS SET FECHA = '" + pedidos.Fecha + "' ," +
+                                                     "TOTAL = " + pedidos.Total + " , " +
+                                                     "ESTADO = '" + pedidos.Estado + "' " +
+                              "WHERE IDPEDIDO =" + pedidos.IdPedido;
+            Conexion.Ejecutar(consulta);
+        }
+        public void EliminarPedidoDal (int id)
+        {
+            string consulta = "DELETE  FROM PEDIDOS WHERE IDPEDIDO = " + id;
+            Conexion.Ejecutar(consulta);
+        }
 
     }
 }

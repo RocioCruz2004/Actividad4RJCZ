@@ -111,7 +111,7 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(83, 183);
+            textBox3.Location = new Point(97, 183);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(88, 23);
             textBox3.TabIndex = 8;
@@ -127,6 +127,7 @@
             // 
             // button1
             // 
+            button1.DialogResult = DialogResult.OK;
             button1.Location = new Point(220, 93);
             button1.Name = "button1";
             button1.Size = new Size(50, 145);

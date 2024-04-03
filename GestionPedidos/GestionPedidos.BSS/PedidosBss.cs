@@ -32,5 +32,13 @@ namespace GestionPedidos.BSS
         {
             return dal.ObtenerIdPedidoDal (id);
         }
+        public void EditarPedidoBss (Pedidos pedidos)
+        {
+            dal.EditarPedidoDal(pedidos);
+        }
+        public void EliminarPedidoBss (int id)
+        {
+            dal.EliminarPedidoDal(id);
+        }
     }
 }
