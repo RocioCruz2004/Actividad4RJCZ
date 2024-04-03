@@ -24,7 +24,7 @@ namespace GestionPedidos.DAL
         }
         public DataTable CalcularTotalClienteDal(int id)
         {
-            string consulta = "select C.Nombre, SUM(TOTAL) AS MONTOPEDIDOS\r\nfrom PEDIDOS P\r\n\tINNER JOIN CLIENTE C ON C.IDCLIENTE = P.IDCLIENTE\r\nWHERE P.IdCliente =" + id + "\r\nGROUP BY C.Nombre";
+            string consulta = "select C.Nombre, SUM(TOTAL) AS MONTOPEDIDOS, COUNT(IDPEDIDO) AS TOTALPEDIDOS\r\nfrom PEDIDOS P\r\n\tINNER JOIN CLIENTE C ON C.IDCLIENTE = P.IDCLIENTE\r\nWHERE P.IdCliente =" + id + "\r\nGROUP BY C.Nombre";
             DataTable lista = Conexion.EjecutarDataTabla(consulta, "tabla");
             return lista;
         }

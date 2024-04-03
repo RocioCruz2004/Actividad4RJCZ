@@ -49,7 +49,7 @@ namespace GestionPedidos.VISTA.PedidosVista
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e) //btn eliminar pedido
         {
             PedidosEliminarVista ventana3 = new PedidosEliminarVista();
             if (ventana3.ShowDialog() == DialogResult.OK)

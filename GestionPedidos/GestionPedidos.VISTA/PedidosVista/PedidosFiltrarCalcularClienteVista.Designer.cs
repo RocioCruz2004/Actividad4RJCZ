@@ -92,7 +92,7 @@
             dataGridView2.Location = new Point(165, 275);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.ReadOnly = true;
-            dataGridView2.Size = new Size(246, 64);
+            dataGridView2.Size = new Size(365, 64);
             dataGridView2.TabIndex = 10;
             // 
             // PedidosFiltrarCalcularClienteVista

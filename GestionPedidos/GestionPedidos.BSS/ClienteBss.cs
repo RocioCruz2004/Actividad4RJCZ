@@ -20,5 +20,17 @@ namespace GestionPedidos.BSS
         {
             return dal.ObtenerIdClienteDal(id);
         }
+        public void InsertarClienteBss(Cliente cliente)
+        {
+            dal.InsertarClienteDal(cliente);
+        }
+        public void EditarClienteBss(Cliente cliente)
+        {
+            dal.EditarClienteDal(cliente);
+        }
+        public void EliminarClienteBss(int id)
+        {
+            dal.EliminarClienteDal(id);
+        }
     }
 }

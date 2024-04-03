@@ -32,5 +32,30 @@ namespace GestionPedidos.DAL
             }
             return cliente;
         }
+        public void InsertarClienteDal(Cliente cliente)
+        {
+            string consulta = "INSERT INTO CLIENTE VALUES(" +
+                              "'" + cliente.Nombre + "' ," +
+                              " '" + cliente.Apellido + "' ," +
+                              " '" + cliente.CorreoElectronico + "' ," +
+                              " '" + cliente.Telefono + "' ," +
+                              " '" + cliente.Direccion + "' )";
+            Conexion.Ejecutar(consulta);
+        }
+        public void EditarClienteDal(Cliente cliente)
+        {
+            string consulta = "UPDATE CLIENTE SET NOMBRE = '" + cliente.Nombre + "' ," +
+                                                     "APELLIDO = '" + cliente.Apellido + "' ," +
+                                                     "CORREOELECTRONICO = '" + cliente.CorreoElectronico + "'," +
+                                                     "TELEFONO = '" + cliente.Telefono + "' , " +
+                                                     "DIRECCION = '" + cliente.Direccion + "' " +
+                              "WHERE IDCLIENTE =" + cliente.IdCliente;
+            Conexion.Ejecutar(consulta);
+        }
+        public void EliminarClienteDal(int id)
+        {
+            string consulta = "DELETE  FROM CLIENTE WHERE IDCLIENTE = " + id;
+            Conexion.Ejecutar(consulta);
+        }
     }
 }
