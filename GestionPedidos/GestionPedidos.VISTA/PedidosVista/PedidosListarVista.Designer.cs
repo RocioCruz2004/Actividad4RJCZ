@@ -86,6 +86,7 @@
             button6.TabIndex = 10;
             button6.Text = "FILTRAR PEDIDO\r\nPOR CLIENTE";
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button7
             // 

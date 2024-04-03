@@ -57,5 +57,11 @@ namespace GestionPedidos.VISTA.PedidosVista
                 dataGridView1.DataSource = bss.ListarPedidosBss();
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            PedidosListarPorClienteVista ventana4 = new PedidosListarPorClienteVista();
+            ventana4.Show();
+        }
     }
 }
